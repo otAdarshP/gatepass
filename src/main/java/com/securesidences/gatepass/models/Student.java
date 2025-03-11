@@ -7,6 +7,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -35,4 +37,8 @@ public class Student {
 
     @Column (nullable = false)
     private int phoneNo;
+
+    @OneToMany (mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
+    List<GatePassRequest> gatePassRequests;
+
 }
