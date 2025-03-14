@@ -30,8 +30,5 @@ public class ParentApproval {
     @Column (nullable = false)
     private String parentRemarks;
 
-
-
-
 }
 
